@@ -1,4 +1,8 @@
 
-public class Bike {
+public class Bike extends Vehicle{
+
+	public Bike() {
+
+	}
 
 }
