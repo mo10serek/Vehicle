@@ -1,31 +1,15 @@
 
 public class Vehicle {
 	
-	public static enum Colour {
-		red("red"),
-		blue("blue"),
-		green("green"),
-		black("black"),
-		white("white"),
-		orange("orange"),
-		yellow("yellow");
+	public Vehicle()
+	{
 		
-		private final String colour;
-		
-		Colour(String colour){
-			this.colour = colour;
-		}
-		
-		public String setColour(){
-			return this.colour;
-		}
 	}
-	
-	public String licensePlateNumber;
-	public String colour;
-	public int numberOfDoors;
-	public int speed;
-	public int maximunSpeed;
+	public static String licensePlateNumber;
+	public static String colour;
+	public static int numberOfDoors;
+	public static int speed;
+	public static int maximunSpeed;
 	public int minimunSpeed;
 
 	protected int Accelerate(int speed){
@@ -70,11 +54,6 @@ public class Vehicle {
 
 	public void setSpeed(int speed) {
 		this.speed = speed;
-	}
-
-	public Vehicle(/*String licensePlateNumber, String colour, int numberOfDoors, int speed, int maximunSpeed*/)
-	{
-		
 	}
 
 }

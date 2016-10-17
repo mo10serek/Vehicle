@@ -3,7 +3,7 @@
  * Created on: 22-Sep-2016
  * Created for: ICS4U
  * Daily Assignment – 1-09
- * This program cauculates the class average
+ * This program calculates the class average
 */
 
 import java.io.BufferedReader;
@@ -18,11 +18,15 @@ public class GetVehicle {
 		BufferedReader br = new BufferedReader(r);
 		Scanner input = new Scanner(System.in);
 		
+		String licensePlateNumber;
+		String colour;
+		int numberOfDoors;
+		int speed;
+		int maximunSpeed;
+		int minimunSpeed;
+				
 		Vehicle vehicle1 = new Vehicle();
 		Vehicle vehicle2 = new Vehicle();
-		
-		Truck truck1 = new Truck();
-		Bike bike1 = new Bike();
 		
 		// vehicle1
 		System.out.println("put the license plate number");
@@ -59,8 +63,11 @@ public class GetVehicle {
 		//displays the vehicles
 		System.out.println(vehicle1.licensePlateNumber + " " + vehicle1.colour + " " + vehicle1.numberOfDoors + " " + vehicle1.speed + " " + vehicle1.maximunSpeed + " " + vehicle1.minimunSpeed);
 		System.out.println(vehicle2.licensePlateNumber + vehicle2.colour + " " + vehicle2.numberOfDoors + " " + vehicle2.speed + " " + vehicle2.maximunSpeed + " " + vehicle2.minimunSpeed);
-		
-		// vehicle1
+
+		Truck truck1 = new Truck();
+		Bike bike1 = new Bike();
+
+		// truck
 		System.out.println("put the license plate number");
 		truck1.licensePlateNumber = br.readLine();
 		
@@ -73,8 +80,8 @@ public class GetVehicle {
 		System.out.println("put the speed");
 		truck1.speed = (int) input.nextDouble();
 		
-		truck1.maximunSpeed = vehicle1.Accelerate(truck1.speed);
-		truck1.minimunSpeed = vehicle1.Brake(truck1.speed);
+		truck1.maximunSpeed = truck1.Accelerate(truck1.speed);
+		truck1.minimunSpeed = truck1.Brake(truck1.speed);
 
 		System.out.println(truck1.licensePlateNumber + " " + truck1.colour + " " + truck1.numberOfDoors + " " + truck1.speed + " " + truck1.maximunSpeed + " " + truck1.minimunSpeed);
 		
@@ -91,8 +98,8 @@ public class GetVehicle {
 		System.out.println("put the speed");
 		bike1.speed = (int) input.nextDouble();;
 
-		bike1.maximunSpeed = vehicle1.Accelerate(bike1.speed);
-		bike1.minimunSpeed = vehicle1.Brake(bike1.speed);
+		bike1.maximunSpeed = bike1.Accelerate(bike1.speed);
+		bike1.minimunSpeed = bike1.Brake(bike1.speed);
 		
 		System.out.println(bike1.licensePlateNumber + " " + bike1.colour + " " + bike1.numberOfDoors + " " + bike1.speed + " " + bike1.maximunSpeed + " " + bike1.minimunSpeed);
 	}
