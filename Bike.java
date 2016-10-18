@@ -1,8 +1,17 @@
 
 public class Bike extends Vehicle{
 
-	public Bike(String licensePlateNumber, String colour, int numberOfDoors, int speed, int maximunSpeed, int minimunSpeed) {
-		 super(licensePlateNumber, colour, numberOfDoors, speed, maximunSpeed);
+	public String colour;
+	public int speed;
+	
+	
+	public Bike(String colour, int speed, int maximunSpeed, int minimunSpeed) {
+		super(licensePlateNumber, colour, numberOfDoors, speed, maximunSpeed, minimunSpeed);
+
+		this.colour = colour;
+		this.speed = speed;
+		 
+		 
 	 }   
 	
 	protected int Accelerate(int speed){

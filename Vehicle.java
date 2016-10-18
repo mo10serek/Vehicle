@@ -1,16 +1,25 @@
 
 public class Vehicle {
-	
-	public Vehicle()
-	{
-		
-	}
+
+
 	public static String licensePlateNumber;
 	public static String colour;
 	public static int numberOfDoors;
 	public static int speed;
 	public static int maximunSpeed;
 	public int minimunSpeed;
+
+	//constructor
+
+	public Vehicle (String licensePlateNumber, String colour, int numberOfDoors, int speed , int maxspeed, int minSpeed){
+
+		this.licensePlateNumber = licensePlateNumber;
+		this.colour = colour;
+		this.numberOfDoors = numberOfDoors;
+		this.speed = 0;		
+	}
+	
+	
 
 	protected int Accelerate(int speed){
 		maximunSpeed = speed * 5;

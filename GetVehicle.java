@@ -18,15 +18,15 @@ public class GetVehicle {
 		BufferedReader br = new BufferedReader(r);
 		Scanner input = new Scanner(System.in);
 		
-		String licensePlateNumber;
-		String colour;
-		int numberOfDoors;
-		int speed;
-		int maximunSpeed;
-		int minimunSpeed;
+		String licensePlateNumber = null;
+		String colour = null;
+		int numberOfDoors = 0;
+		int speed = 0;
+		int maximunSpeed = 0 ;
+		int minimunSpeed = 0;
 				
-		Vehicle vehicle1 = new Vehicle();
-		Vehicle vehicle2 = new Vehicle();
+		Vehicle vehicle1 = new Vehicle(licensePlateNumber, colour, numberOfDoors, speed ,  maximunSpeed, minimunSpeed);
+		Vehicle vehicle2 = new Vehicle(licensePlateNumber, colour, numberOfDoors, speed ,  maximunSpeed, minimunSpeed);
 		
 		// vehicle1
 		System.out.println("put the license plate number");
@@ -44,6 +44,8 @@ public class GetVehicle {
 		vehicle1.maximunSpeed = vehicle1.Accelerate(vehicle1.speed);
 		vehicle1.minimunSpeed = vehicle1.Brake(vehicle1.speed);
 
+		
+		
 		//vehicle2
 		System.out.println("put the license plate number");
 		vehicle2.licensePlateNumber = br.readLine();
@@ -64,18 +66,12 @@ public class GetVehicle {
 		System.out.println(vehicle1.licensePlateNumber + " " + vehicle1.colour + " " + vehicle1.numberOfDoors + " " + vehicle1.speed + " " + vehicle1.maximunSpeed + " " + vehicle1.minimunSpeed);
 		System.out.println(vehicle2.licensePlateNumber + vehicle2.colour + " " + vehicle2.numberOfDoors + " " + vehicle2.speed + " " + vehicle2.maximunSpeed + " " + vehicle2.minimunSpeed);
 
-		Truck truck1 = new Truck();
-		Bike bike1 = new Bike();
+		Truck truck1 = new Truck(licensePlateNumber, colour,numberOfDoors,speed, minimunSpeed, minimunSpeed);
+		Bike bike1 = new Bike(colour, speed, maximunSpeed, minimunSpeed);
 
 		// truck
-		System.out.println("put the license plate number");
-		truck1.licensePlateNumber = br.readLine();
-		
 		System.out.println("put the colour");
 		truck1.colour = br.readLine();
-
-		System.out.println("put the number of doors");
-		truck1.numberOfDoors = (int) input.nextDouble();
 
 		System.out.println("put the speed");
 		truck1.speed = (int) input.nextDouble();
@@ -83,7 +79,7 @@ public class GetVehicle {
 		truck1.maximunSpeed = truck1.Accelerate(truck1.speed);
 		truck1.minimunSpeed = truck1.Brake(truck1.speed);
 
-		System.out.println(truck1.licensePlateNumber + " " + truck1.colour + " " + truck1.numberOfDoors + " " + truck1.speed + " " + truck1.maximunSpeed + " " + truck1.minimunSpeed);
+		System.out.println( truck1.colour + " " + truck1.speed + " " + truck1.maximunSpeed + " " + truck1.minimunSpeed);
 		
 		//bike1
 		System.out.println("put the license plate number");
